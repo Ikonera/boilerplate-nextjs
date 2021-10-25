@@ -1,16 +1,36 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+/* for Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+    @font-face {
+        font-family: "Lato-Regular";
+        src: url("../public/fonts/Lato/Lato-Regular.woff") format("woff");
+    }
 
-* {
-  box-sizing: border-box;
+    @font-face {
+        font-family: "Lato-Bold";
+        src: url("../public/fonts/Lato/Lato-Bold.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Lato-Black";
+        src: url("../public/fonts/Lato/Lato-Black.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Lato-Thin";
+        src: url("../public/fonts/Lato/Lato-Thin.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Lato-Italic";
+        src: url("../public/fonts/Lato/Lato-Italic.woff") format("woff");
+    }
+
+    @font-face {
+        font-family: "Lato-Medium";
+        src: url("../public/fonts/Lato/Lato-Medium.woff") format("woff");
+    }
 }
