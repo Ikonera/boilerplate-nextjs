@@ -1,5 +1,10 @@
 import { FunctionComponent } from "react";
 import Head from "next/head";
+import {
+    Typography,
+    AppBar,
+    Grid
+} from "@mui/material";
 
 const Header: FunctionComponent = () => {
     return (
@@ -7,13 +12,13 @@ const Header: FunctionComponent = () => {
             <Head>
                 <title>Nextjs boilerplate</title>
             </Head>
-            <header className="shadow-lg bg-secondaryDark">
-                <div className="">
-                    <p className="font-medium text-center text-primary text-3xl pb-2 pt-2">
+            <AppBar position="static">
+                <Grid>
+                    <Typography>
                         Nextjs boilerplate
-                    </p>
-                </div>
-            </header>
+                    </Typography>
+                </Grid>
+            </AppBar>
         </>
     )
 }
