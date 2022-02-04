@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 					</Typography>
 				</Grid>
 				<Grid item marginTop="2%">
-					<Button href="https://github.com/Ikonera/boilerplate-nestjs" target="_blank">
+					<Button href="https://github.com/Ikonera/boilerplate-nextjs" target="_blank">
 						Ikonera - Nextjs boilerplate repository
 					</Button>
 				</Grid>
