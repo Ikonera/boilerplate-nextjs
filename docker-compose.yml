@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  boilerplate-nextjs:
+    container_name: "nextjs-boilerplate"
+    build:
+      dockerfile: ./Dockerfile.${NODE_ENV}
+    ports:
+      - 3000:${NEXTJS_PORT}
+    environment:
+      - NEXTJS_PORT
+      - NODE_ENV
+      - DOPPLER_TOKEN

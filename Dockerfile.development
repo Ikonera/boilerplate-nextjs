@@ -1,0 +1,22 @@
+FROM node:lts-alpine3.14 AS deps
+LABEL maintainer="Ikonera" email="gabrielmlt@protonmail.ch"
+
+ARG NODE_ENV
+ARG NEXTJS_PORT
+
+COPY . ./app
+WORKDIR /app
+
+RUN wget -q -t3 'https://packages.doppler.com/public/cli/rsa.8004D9FF50437357.key' -O /etc/apk/keys/cli@doppler-8004D9FF50437357.rsa.pub
+RUN echo 'https://packages.doppler.com/public/cli/alpine/any-version/main' | tee -a /etc/apk/repositories
+RUN apk add doppler
+RUN yarn --silent
+
+ENV NODE_ENV ${NODE_ENV}
+
+EXPOSE ${NEXTJS_PORT}
+
+ENV NEXT_TELEMETRY_DESABLED 1
+ENTRYPOINT ["doppler", "run", "--"]
+
+CMD ["yarn", "dev"]

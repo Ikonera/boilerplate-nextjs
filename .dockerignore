@@ -1,0 +1,11 @@
+.eslintrc.json
+README.md
+node_modules/
+.gitignore
+Dockerfile.prod
+Dockerfile.dev
+yarn.lock
+.git
+.github/
+.circleci/
+.next/
