@@ -1,29 +1,27 @@
 import type { NextPage } from "next";
 import {
 	Typography,
-	Button,
 	Grid
 } from "@mui/material";
 
+const useStyles = {
+	section: {
+		marginTop: "20%"
+	}
+}
+
 const Home: NextPage = () => {
+
+	const classes = useStyles
+
 	return (
-		<section>
-			<Grid container direction="column" alignContent="center" marginTop="15%" alignItems="center">
-				<Grid item>
-					<Typography>
-						Welcome to this NextJS / TS virgin boilerplate !
-					</Typography>
-					<Typography>
-						Feel free to made her what you want :D
-					</Typography>
-				</Grid>
-				<Grid item marginTop="2%">
-					<Button href="https://github.com/Ikonera/boilerplate-nextjs" target="_blank">
-						Ikonera - Nextjs boilerplate repository
-					</Button>
-				</Grid>
+		<Grid container sx={classes.section} justifyContent="center" component="section">
+			<Grid item>
+				<Typography>
+					Start editing <code>/pages/index.tsx</code>
+				</Typography>
 			</Grid>
-		</section>
+		</Grid>
 	);
 };
 
